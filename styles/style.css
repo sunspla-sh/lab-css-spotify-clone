@@ -6,3 +6,270 @@ Green: #00B172
 White: #FFF
 
 */
+
+body {
+  margin: 0;
+  font-family: "sans-serif";
+  color: #1A1A1A;
+}
+.hero-image{
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image h1{
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.hero-image p{
+  color: white;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.navigation img {
+  height: 48px;
+}
+
+.mobile-menu-hamburger {
+  height: 48px;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+#features .features-header-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#features h2{
+  text-align: center;
+  border-bottom: 5px solid #00B172;
+  display: inline;
+  padding-bottom: 0.25rem;
+}
+
+#features .features-header-container + div{
+  margin-bottom: 2rem;
+}
+
+#features h3 {
+  color: #00B172;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+#features article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#features article img {
+  width: 92px;
+  height: 76px;
+}
+
+#features article p {
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+}
+
+#details {
+  color: white;
+  background-color: #00B172;
+  padding-bottom: 4rem;
+}
+
+#details .details-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+#details .details-image-container img {
+  width: 80%;
+  margin: 3rem 0;
+}
+
+#details .details-spotify-logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+#details .details-spotify-logo-container img {
+  width: 92px;
+}
+
+#details h2 {
+  text-align: center;
+  border-bottom: 5px solid white;
+  padding-bottom: 0.25rem;
+  margin: 3rem 1rem 1rem 2rem;
+}
+
+#details article {
+  text-align: center;
+  margin: 2rem;
+}
+
+
+#details article p{
+  line-height: 1.5rem;
+}
+
+/* I chose this breakpoint at 448px arbitrarily based on what made the website
+   look "nice" in my opinion */
+@media(min-width: 448px){
+
+  #details .details-image-container img {
+    width: 60%;
+    margin: 4rem 0;
+  }
+
+  #details .details-spotify-logo-container img {
+    width: 20%;
+  }
+
+  #details h2 {
+    text-align: center;
+    display: inline;
+    border-bottom: 5px solid white;
+    padding-bottom: 0.25rem;
+    margin: 0;
+  }
+
+  #details div:last-of-type{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #details article{
+    margin-bottom: 0;
+  }
+
+  #details article p {
+    max-width: 300px;
+  }
+}
+
+/* 
+  I chose this breakpoint at 768px because it's a common breakpoint for tablet devices
+  and also used by the popular css library, Bootstrap, for one of their breakpoints
+*/
+
+@media(min-width: 768px){
+  .mobile-menu-hamburger {
+    display: none;
+  }
+  
+  .mobile-menu{
+    display: none;
+  }
+  
+  .desktop-menu {
+    display: block;
+  }
+
+  .desktop-menu ul{
+    display: flex;
+    list-style-type: none;
+  }
+  .desktop-menu li {
+    margin-left: 2rem;
+  }
+
+  #features div:last-of-type{
+    display: flex;
+    justify-content: center;
+  }
+
+  #features article{
+    flex: 1;
+  }
+
+  #details {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #details .details-image-container,
+  #details div:last-of-type {
+    flex: 1;
+  }
+
+  #details .details-spotify-logo-container{
+    display: none;
+  }
+
+  #details .details-image-container img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  #details h2{
+    max-width: 300px;
+    margin-bottom: 2rem;
+  }
+
+  #details article {
+    margin: 0 2rem;
+    max-width: 300px;
+  }
+  
+}
+
+@media(min-width: 1200px){
+
+  #details {
+    position: relative;
+  }
+
+  #details .details-spotify-logo-container{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #details .details-image-container img {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  #details h2{
+    max-width: 400px;
+  }
+
+  #details article {
+    margin: 0 2rem;
+    max-width: 350px;
+  }
+
+}
